@@ -54,7 +54,8 @@ AI-Text-Summarizer/
 6. Users can save or load summaries at any time.
 
 ---
-
+***SCREENSHOT***
+![Ai Text summarizer screenshot](https://github.com/saideeraj-929/Ai_Text_Summarizer/blob/33f1a98981036c277d04926aca42280e26acc1c4/Ai_summarizer_version%201%20screenshot.png)
 ## 📦 Installation
 
 1. Clone the repository.
