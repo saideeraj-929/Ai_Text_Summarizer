@@ -2,6 +2,7 @@ import tkinter as tk
 import os
 from groq import Groq
 from tkinter import messagebox
+# -----Window-----
 client = Groq(
     api_key=os.getenv("GROQ_API_KEY")
 )
@@ -9,12 +10,15 @@ window=tk.Tk()
 window.title(" 🤖 AI Text Summarizer")
 window.geometry("700x600")
 window.config(bg="lavender")
+
 SUMMARIZE_FILE="summarize.txt"
 title=tk.Label(window,text="🤖 AI Text Summarizer",font=("Arial",18,"bold"))
 title.pack(pady=5)
 label=tk.Label(window,text="Paste your text here").pack(pady=5)
 text_entry=tk.Text(window,height=6,width=60,)
 text_entry.pack(pady=5)
+
+# -----Functions-----
 def save():
     summary = summary_view.get("1.0",tk.END)
     with open(SUMMARIZE_FILE,"w")as file:
@@ -78,6 +82,8 @@ Only summarize the given text.
     except Exception as e:
         summary_view.delete("1.0", tk.END)
         summary_view.insert(tk.END, f"Error:\n\n{e}")
+
+# -----Buttons-----
 
 summarize_button=tk.Button(window,text="Summarize",font=("Arial",12,"bold"),command=summarize)
 summarize_button.pack(pady=5)
