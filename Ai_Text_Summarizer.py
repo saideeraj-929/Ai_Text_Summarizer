@@ -105,6 +105,6 @@ summary_label = tk.Label(
 summary_label.pack()
 summary_view=tk.Text(window,height=6,width=60,wrap="word")
 summary_view.pack(pady=5)
-load()
+
 window.mainloop()
 
